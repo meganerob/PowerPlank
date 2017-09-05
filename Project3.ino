@@ -13,12 +13,10 @@
 // declare IO pins below, ie: const byte LIMIT_SWITCH_1_PIN = 23;
 //
 
-
 //
 // declare objects below, ie:  RCServo servo1;  or  SpeedyStepper stepper1;
 //
 
-SpeedyStepper stepper1;
 
 
 byte project3WorkingFlag = true;
@@ -53,7 +51,6 @@ void setupProject3()
   //
   // connect objects to pins below, ie: stepper1.connectToPort(1);  or  servo1.connectToPin(8);) 
   //
-stepper1.connectToPort(2);
 
   //
   // set to true to indicate that this project is working
@@ -79,8 +76,7 @@ void initializeProject3(void)
   //
   // initialize things that take time here
   //
-
-
+ 
   project3InitializedFlag = true;
 }
 
@@ -95,7 +91,7 @@ void enableProject3(void)
   //
   // enable high current devices below, ie: stepper1.enableStepper();
   //
-  stepper1.enableStepper();
+
 }
 
 
@@ -109,7 +105,7 @@ void disableProject3(void)
   //
   // disable high current devices below, ie: stepper1.disableStepper();
   //
-stepper1.disableStepper();
+
 }
 
 
@@ -119,9 +115,7 @@ stepper1.disableStepper();
 //
 void runProject3(byte databyte)
 { 
-  stepper1.setSpeedInStepsPerSecond(200);
-  stepper1.setAccelerationInStepsPerSecondPerSecond(200);
-  stepper1.moveRelativeInSteps(400);
+
 }
 
 
