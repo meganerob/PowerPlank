@@ -1,7 +1,7 @@
 //      ******************************************************************
 //      *                                                                *
 //      *                            Project 3                           *
-//      *      Project name: __________________________________          *
+//      *      Project name: ___Servo Tester___________________          *
 //      *      Student name: __________________________________          *
 //      *                                                                *
 //      *      Copyright (c) Dos Pueblos Engineering Academy, 2017       *
@@ -13,11 +13,13 @@
 // declare IO pins below, ie: const byte LIMIT_SWITCH_1_PIN = 23;
 //
 
+int testerPinNum = 27;
+
 //
 // declare objects below, ie:  RCServo servo1;  or  SpeedyStepper stepper1;
 //
 
-
+RCServo tester;
 
 byte project3WorkingFlag = true;
 bool project3InitializedFlag;
@@ -51,6 +53,9 @@ void setupProject3()
   //
   // connect objects to pins below, ie: stepper1.connectToPort(1);  or  servo1.connectToPin(8);) 
   //
+
+tester.connectToPin(testerPinNum);
+tester.setServoPosition(0);
 
   //
   // set to true to indicate that this project is working
@@ -115,7 +120,16 @@ void disableProject3(void)
 //
 void runProject3(byte databyte)
 { 
-
+tester.setMoveToServoPosition(.5, 60);
+delay(500);
+tester.setMoveToServoPosition(-1, 60);
+delay(500);
+tester.setMoveToServoPosition(1, 60);
+delay(500);
+tester.setMoveToServoPosition(-.9, 60);
+delay(500);
+tester.setMoveToServoPosition(.75, 60);
+delay(500);
 }
 
 

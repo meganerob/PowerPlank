@@ -93,53 +93,53 @@ void setup()
 
 
 
+////
+//// setup the Multi Interface Board
+////
+//void setupMultiInterfaceBoard()
+//{
+//  //
+//  // configure the LED and button
+//  //
+//  pinMode(LED_PIN, OUTPUT);
+//  digitalWrite(LED_PIN, LOW);
+//  pinMode(BUTTON_PIN, INPUT_PULLUP);
 //
-// setup the Multi Interface Board
 //
-void setupMultiInterfaceBoard()
-{
-  //
-  // configure the LED and button
-  //
-  pinMode(LED_PIN, OUTPUT);
-  digitalWrite(LED_PIN, LOW);
-  pinMode(BUTTON_PIN, INPUT_PULLUP);
-
-
-  //
-  // configure the Driver bits
-  //
-  pinMode(DRIVER_1_PIN, OUTPUT);
-  digitalWrite(DRIVER_1_PIN, LOW);
-
-  pinMode(DRIVER_2_PIN, OUTPUT);
-  digitalWrite(DRIVER_2_PIN, LOW);
-
-  pinMode(DRIVER_3_PIN, OUTPUT);
-  digitalWrite(DRIVER_3_PIN, LOW);
-
-  pinMode(DRIVER_4_PIN, OUTPUT);
-  digitalWrite(DRIVER_4_PIN, LOW);
-
-
-  //
-  // configure the stepper bits
-  //
-  pinMode(STEPPER_1_ENABLE_PIN, OUTPUT);
-  digitalWrite(STEPPER_1_ENABLE_PIN, STEPPER_ENABLE_DISABLED);
-  pinMode(STEPPER_1_DIRECTION_PIN, OUTPUT);
-  digitalWrite(STEPPER_1_DIRECTION_PIN, LOW);
-  pinMode(STEPPER_1_STEP_PIN, OUTPUT);
-  digitalWrite(STEPPER_1_STEP_PIN, LOW);
-
-  pinMode(STEPPER_2_ENABLE_PIN, OUTPUT);
-  digitalWrite(STEPPER_2_ENABLE_PIN, STEPPER_ENABLE_DISABLED);
-  pinMode(STEPPER_2_DIRECTION_PIN, OUTPUT);
-  digitalWrite(STEPPER_2_DIRECTION_PIN, LOW);
-  pinMode(STEPPER_2_STEP_PIN, OUTPUT);
-  digitalWrite(STEPPER_2_STEP_PIN, LOW);
-
-}
+//  //
+//  // configure the Driver bits
+//  //
+//  pinMode(DRIVER_1_PIN, OUTPUT);
+//  digitalWrite(DRIVER_1_PIN, LOW);
+//
+//  pinMode(DRIVER_2_PIN, OUTPUT);
+//  digitalWrite(DRIVER_2_PIN, LOW);
+//
+//  pinMode(DRIVER_3_PIN, OUTPUT);
+//  digitalWrite(DRIVER_3_PIN, LOW);
+//
+//  pinMode(DRIVER_4_PIN, OUTPUT);
+//  digitalWrite(DRIVER_4_PIN, LOW);
+//
+//
+//  //
+//  // configure the stepper bits
+//  //
+//  pinMode(STEPPER_1_ENABLE_PIN, OUTPUT);
+//  digitalWrite(STEPPER_1_ENABLE_PIN, STEPPER_ENABLE_DISABLED);
+//  pinMode(STEPPER_1_DIRECTION_PIN, OUTPUT);
+//  digitalWrite(STEPPER_1_DIRECTION_PIN, LOW);
+//  pinMode(STEPPER_1_STEP_PIN, OUTPUT);
+//  digitalWrite(STEPPER_1_STEP_PIN, LOW);
+//
+//  pinMode(STEPPER_2_ENABLE_PIN, OUTPUT);
+//  digitalWrite(STEPPER_2_ENABLE_PIN, STEPPER_ENABLE_DISABLED);
+//  pinMode(STEPPER_2_DIRECTION_PIN, OUTPUT);
+//  digitalWrite(STEPPER_2_DIRECTION_PIN, LOW);
+//  pinMode(STEPPER_2_STEP_PIN, OUTPUT);
+//  digitalWrite(STEPPER_2_STEP_PIN, LOW);
+//
+//}
 
 
 // ---------------------------------------------------------------------------------

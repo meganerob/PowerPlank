@@ -1,7 +1,7 @@
 //      ******************************************************************
 //      *                                                                *
 //      *                            Project 4                           *
-//      *      Project name: __________________________________          *
+//      *      Project name: ___Ramp Duel______________________          *
 //      *      Student name: __________________________________          *
 //      *                                                                *
 //      *      Copyright (c) Dos Pueblos Engineering Academy, 2017       *
@@ -13,6 +13,12 @@
 // declare IO pins below, ie: const byte LIMIT_SWITCH_1_PIN = 24;
 //
 
+const byte longCylinderProx = 26;
+const byte shortCylinderProx = 27;
+
+const byte longCylinderPin = 4;
+const byte shortCylinderPin = 3;
+
 
 //
 // declare objects below, ie:  RCServo servo1;  or  SpeedyStepper stepper1;
@@ -20,9 +26,25 @@
 
 
 
-
 byte project4WorkingFlag = true;
 bool project4InitializedFlag;
+
+
+void onLongCylinderPin() {
+  digitalWrite(longCylinderPin, HIGH);
+}
+
+void offLongCylinderPin() {
+  digitalWrite(longCylinderPin, LOW);
+}
+
+void onShortCylinderPin() {
+  digitalWrite(shortCylinderPin, HIGH);
+}
+
+void offShortCylinderPin() {
+  digitalWrite(shortCylinderPin, LOW);
+}
 
 
 // ---------------------------------------------------------------------------------
@@ -48,6 +70,11 @@ void setupProject4()
   // configure IO pins below, ie: pinMode(24, OUTPUT);  or  pinMode(25, INPUT_PULLUP);
   //
 
+  pinMode(longCylinderPin, OUTPUT);
+  pinMode(shortCylinderPin, OUTPUT);
+
+  pinMode(longCylinderProx, INPUT);
+  pinMode(shortCylinderProx, INPUT);
   
   
   //
@@ -119,6 +146,14 @@ void disableProject4(void)
 //
 void runProject4(byte databyte)
 { 
+  onLongCylinderPin();
+  delay(100);
+  offLongCylinderPin();
+  delay(1000);
+  onShortCylinderPin();
+  delay(100);
+  offShortCylinderPin();
+  delay(1000);
 }
 
 
